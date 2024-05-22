@@ -13,6 +13,7 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
   testID="pill-toggle"
 >
   <View
+    accessibilityLabel="pill-toggle-1"
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -38,9 +39,10 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
         "opacity": 1,
       }
     }
-    testID="pill-toggle-button"
+    testID="pill-toggle-1"
   >
     <Text
+      accessibilityLabel="pill-toggle-1-label"
       inversed={true}
       muted={false}
       small={true}
@@ -58,65 +60,14 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
           },
         ]
       }
-      testID="pill-toggle-button-label"
+      testID="pill-toggle-1-label"
       weight="semiBold"
     >
       Selected
     </Text>
   </View>
   <View
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    nativeID="animatedComponent"
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "backgroundColor": "#FFFFFF",
-        "borderBottomLeftRadius": 0,
-        "borderBottomRightRadius": 0,
-        "borderColor": "#DBE0E3",
-        "borderRightWidth": 0,
-        "borderStyle": "solid",
-        "borderTopLeftRadius": 0,
-        "borderTopRightRadius": 0,
-        "borderWidth": 1,
-        "opacity": 1,
-      }
-    }
-    testID="pill-toggle-button"
-  >
-    <Text
-      inversed={false}
-      muted={true}
-      small={true}
-      style={
-        Array [
-          Object {
-            "color": "#97A4AB",
-            "fontFamily": "System",
-            "fontSize": 14,
-            "fontStyle": "normal",
-            "fontWeight": "600",
-            "paddingHorizontal": 22,
-            "paddingVertical": 10,
-            "textAlign": "left",
-          },
-        ]
-      }
-      testID="pill-toggle-button-label"
-      weight="semiBold"
-    >
-      Unselected
-    </Text>
-  </View>
-  <View
+    accessibilityLabel="pill-toggle-2"
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -132,19 +83,20 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
       Object {
         "backgroundColor": "#EDF1F5",
         "borderBottomLeftRadius": 0,
-        "borderBottomRightRadius": 22,
+        "borderBottomRightRadius": 0,
         "borderColor": "#DBE0E3",
-        "borderRightWidth": 1,
+        "borderRightWidth": 0,
         "borderStyle": "solid",
         "borderTopLeftRadius": 0,
-        "borderTopRightRadius": 22,
+        "borderTopRightRadius": 0,
         "borderWidth": 1,
         "opacity": 1,
       }
     }
-    testID="pill-toggle-button"
+    testID="pill-toggle-2"
   >
     <Text
+      accessibilityLabel="pill-toggle-2-label"
       inversed={false}
       muted={true}
       small={true}
@@ -162,7 +114,61 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
           },
         ]
       }
-      testID="pill-toggle-button-label"
+      testID="pill-toggle-2-label"
+      weight="semiBold"
+    >
+      Unselected
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="pill-toggle-3"
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderBottomLeftRadius": 0,
+        "borderBottomRightRadius": 22,
+        "borderColor": "#DBE0E3",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "borderTopLeftRadius": 0,
+        "borderTopRightRadius": 22,
+        "borderWidth": 1,
+        "opacity": 1,
+      }
+    }
+    testID="pill-toggle-3"
+  >
+    <Text
+      accessibilityLabel="pill-toggle-3-label"
+      inversed={false}
+      muted={true}
+      small={true}
+      style={
+        Array [
+          Object {
+            "color": "#97A4AB",
+            "fontFamily": "System",
+            "fontSize": 14,
+            "fontStyle": "normal",
+            "fontWeight": "600",
+            "paddingHorizontal": 22,
+            "paddingVertical": 10,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="pill-toggle-3-label"
       weight="semiBold"
     >
       Disabled

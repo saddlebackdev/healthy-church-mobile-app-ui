@@ -97,7 +97,8 @@ export const PillToggle: React.FC<IProps> = ({
         return (
           <StyledItem
             key={option.label}
-            testID="pill-toggle-button"
+            testID={option.testID}
+            accessibilityLabel={option.accessibilityLabel}
             activeOpacity={isDisabled ? 1 : 0.75}
             $isDisabled={isDisabled}
             $isFirstChild={isFirstChild}
@@ -108,7 +109,8 @@ export const PillToggle: React.FC<IProps> = ({
               small
               weight="semiBold"
               $isDisabled={isDisabled}
-              testID="pill-toggle-button-label"
+              testID={`${option.testID}-label`}
+              accessibilityLabel={`${option.accessibilityLabel}-label`}
               muted={isDisabled || !isSelected}
               inversed={isSelected}>
               {option.label}

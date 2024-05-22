@@ -44,6 +44,10 @@ export interface IProps {
 
     /** Overrides the option container style */
     style?: object;
+
+    /** QA */
+    accessibilityLabel?: string;
+    testID?: string;
   }>;
   /** Overrides the option container style */
   optionContainerStyle?: ((id: any) => object) | object;

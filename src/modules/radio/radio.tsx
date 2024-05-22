@@ -110,7 +110,8 @@ export const Radio: React.FC<IProps> = React.memo(
         return (
           <StyledGroup
             key={option.label}
-            testID="radio-button"
+            testID={option.testID}
+            accessibilityLabel={option.accessibilityLabel}
             hitSlop={LayoutUtils.addHitSlop(12)}
             onPress={_onPressOption}
             activeOpacity={option.disabled ? 1 : 0.75}
@@ -135,7 +136,8 @@ export const Radio: React.FC<IProps> = React.memo(
               )}
             </StyledRadioOuter>
             <StyledRadioLabelWrapper
-              testID="radio-label"
+              testID={`${option.testID}-label`}
+              accessibilityLabel={`${option.accessibilityLabel}-label`}
               muted={isRadioDisabled || option.disabled}>
               {option.label}
             </StyledRadioLabelWrapper>

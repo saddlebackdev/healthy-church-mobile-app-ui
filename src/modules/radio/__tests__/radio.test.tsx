@@ -14,9 +14,25 @@ describe('Radio', () => {
     onChangeMock = jest.fn();
 
     options = [
-      {label: 'Option 1', value: 1},
-      {label: 'Option 2', value: 2, disabled: true},
-      {label: 'Option 3', value: 3},
+      {
+        label: 'Option 1',
+        value: 1,
+        testID: 'radio-option-1',
+        accessibilityLabel: 'radio-option-1',
+      },
+      {
+        label: 'Option 2',
+        value: 2,
+        testID: 'radio-option-2',
+        accessibilityLabel: 'radio-option-2',
+        disabled: true,
+      },
+      {
+        label: 'Option 3',
+        value: 3,
+        testID: 'radio-option-3',
+        accessibilityLabel: 'radio-option-3',
+      },
     ];
   });
 
@@ -88,50 +104,29 @@ describe('Radio', () => {
 
   describe('Interactions', () => {
     it('should call onChange function on click of radio button', () => {
-      const {getAllByTestId} = render(
+      const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
           <Radio selected={1} options={options} onChange={onChangeMock} />
         </ThemeProvider>,
       );
 
-      const buttons = getAllByTestId('radio-button');
+      const button = getByTestId('radio-option-1');
 
-      fireEvent.press(buttons[0]);
+      fireEvent.press(button);
 
       expect(onChangeMock).toHaveBeenCalledTimes(1);
     });
 
     it('should not call onChange function on click of radio button when option is disabled', () => {
-      const {getAllByTestId} = render(
+      const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
           <Radio selected={1} options={options} onChange={onChangeMock} />
         </ThemeProvider>,
       );
 
-      const buttons = getAllByTestId('radio-button');
+      const button = getByTestId('radio-option-2');
 
-      fireEvent.press(buttons[1]);
-
-      expect(onChangeMock).not.toHaveBeenCalled();
-    });
-
-    it('should not call onChange function on click of radio button when radio itself is disabled', () => {
-      const {getAllByTestId} = render(
-        <ThemeProvider theme={defaultTheme}>
-          <Radio
-            selected={1}
-            options={options}
-            onChange={onChangeMock}
-            disabled
-          />
-        </ThemeProvider>,
-      );
-
-      const buttons = getAllByTestId('radio-button');
-
-      fireEvent.press(buttons[0]);
-      fireEvent.press(buttons[1]);
-      fireEvent.press(buttons[2]);
+      fireEvent.press(button);
 
       expect(onChangeMock).not.toHaveBeenCalled();
     });

@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.76
+
+- Checkbox - Allow adding testID and accessibilityLabel as props
+- Pill Toggle - Allow adding testID and accessibilityLabel as props
+- Radio - Allow adding testID and accessibilityLabel as props
+
 ### v0.0.75
 
 - Added prop to PeopleListItem component to show/hide ID Prefix
@@ -38,7 +44,7 @@
 
 ### v0.0.69
 
-- GroupsListItem - Added bottomElement props for Dynamic UI UX 
+- GroupsListItem - Added bottomElement props for Dynamic UI UX
 - GroupsListItem - Added isExpandable props for Stop Expandable window
 
 ---
