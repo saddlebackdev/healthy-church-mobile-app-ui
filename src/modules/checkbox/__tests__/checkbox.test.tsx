@@ -18,7 +18,11 @@ describe('Checkbox', () => {
     it('renders itself correctly', () => {
       const wrapper = render(
         <ThemeProvider theme={defaultTheme}>
-          <Checkbox isChecked={false} onPress={onChangeMock} />
+          <Checkbox
+            isChecked={false}
+            onPress={onChangeMock}
+            testID="checkbox"
+          />
         </ThemeProvider>,
       );
 
@@ -32,7 +36,12 @@ describe('Checkbox', () => {
     it('should render label when passed', () => {
       const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
-          <Checkbox isChecked={false} onPress={onChangeMock} label="A Label" />
+          <Checkbox
+            isChecked={false}
+            onPress={onChangeMock}
+            testID="checkbox"
+            label="A Label"
+          />
         </ThemeProvider>,
       );
 
@@ -46,7 +55,12 @@ describe('Checkbox', () => {
     it('should render hint when passed', () => {
       const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
-          <Checkbox isChecked={false} onPress={onChangeMock} hint="A Hint" />
+          <Checkbox
+            isChecked={false}
+            onPress={onChangeMock}
+            testID="checkbox"
+            hint="A Hint"
+          />
         </ThemeProvider>,
       );
 
@@ -62,7 +76,11 @@ describe('Checkbox', () => {
     it('should call onPress function on click', () => {
       const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
-          <Checkbox isChecked={false} onPress={onChangeMock} />
+          <Checkbox
+            isChecked={false}
+            onPress={onChangeMock}
+            testID="checkbox"
+          />
         </ThemeProvider>,
       );
 
@@ -76,7 +94,12 @@ describe('Checkbox', () => {
     it('should not call onPress function on click when disabled', () => {
       const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
-          <Checkbox isChecked={false} onPress={onChangeMock} disabled />
+          <Checkbox
+            isChecked={false}
+            onPress={onChangeMock}
+            testID="checkbox"
+            disabled
+          />
         </ThemeProvider>,
       );
 

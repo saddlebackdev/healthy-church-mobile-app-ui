@@ -39,5 +39,9 @@ export interface IProps {
 
     /** Function to be called when pill is pressed */
     onPress: Function;
+
+    /** QA */
+    accessibilityLabel?: string;
+    testID?: string;
   }>;
 }

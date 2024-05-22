@@ -73,9 +73,12 @@ export const Checkbox: React.FC<IProps> = React.memo(
     onPress,
     required,
     optionContainerStyle,
+    testID,
+    accessibilityLabel,
   }): React.ReactElement => (
     <StyledWrapper
-      testID="checkbox"
+      testID={testID}
+      accessibilityLabel={accessibilityLabel}
       disabled={disabled}
       activeOpacity={0.75}
       style={optionContainerStyle}
@@ -92,10 +95,15 @@ export const Checkbox: React.FC<IProps> = React.memo(
       {label || hint ? (
         <StyledDetailsWrapper>
           {label ? (
-            <StyledCheckboxLabel testID="checkbox-label" inversed={inversed}>
+            <StyledCheckboxLabel
+              testID={`${testID}-label`}
+              accessibilityLabel={`${accessibilityLabel}-label`}
+              inversed={inversed}>
               {label}
               {required && (
-                <StyledLabelAsterisk testID="input-label-asterisk">
+                <StyledLabelAsterisk
+                  testID={`${testID}-label-asterisk`}
+                  accessibilityLabel={`${accessibilityLabel}-label-asterisk`}>
                   *
                 </StyledLabelAsterisk>
               )}
@@ -106,7 +114,8 @@ export const Checkbox: React.FC<IProps> = React.memo(
             <StyledCheckboxHint
               muted
               inversed={inversed}
-              testID="checkbox-hint"
+              testID={`${testID}-hint`}
+              accessibilityLabel={`${accessibilityLabel}-hint`}
               variant="caption">
               {hint}
             </StyledCheckboxHint>

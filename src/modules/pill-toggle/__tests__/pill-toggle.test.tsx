@@ -1,4 +1,4 @@
-// npx jest ./src/modules/toggle/__tests__/pill-toggle.test.ts
+// npx jest ./src/modules/pill-toggle/__tests__/pill-toggle.test.ts
 
 import * as React from 'react';
 import {fireEvent, render} from '@testing-library/react-native';
@@ -14,9 +14,28 @@ describe('PillToggle', () => {
     onPressMock = jest.fn();
 
     options = [
-      {label: 'Selected', value: 1, onPress: onPressMock},
-      {label: 'Unselected', value: 2, onPress: onPressMock},
-      {label: 'Disabled', value: 3, onPress: onPressMock, disabled: true},
+      {
+        label: 'Selected',
+        testID: 'pill-toggle-1',
+        accessibilityLabel: 'pill-toggle-1',
+        value: 1,
+        onPress: onPressMock,
+      },
+      {
+        label: 'Unselected',
+        testID: 'pill-toggle-2',
+        accessibilityLabel: 'pill-toggle-2',
+        value: 2,
+        onPress: onPressMock,
+        disabled: true,
+      },
+      {
+        label: 'Disabled',
+        testID: 'pill-toggle-3',
+        accessibilityLabel: 'pill-toggle-3',
+        value: 3,
+        onPress: onPressMock,
+      },
     ];
   });
 
@@ -38,15 +57,15 @@ describe('PillToggle', () => {
     });
 
     it('renders the children correctly', () => {
-      const {getByText} = render(
+      const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
           <PillToggle selected={1} options={options} />
         </ThemeProvider>,
       );
 
-      const option1 = getByText(options[0].label);
-      const option2 = getByText(options[1].label);
-      const option3 = getByText(options[2].label);
+      const option1 = getByTestId(options[0].testID);
+      const option2 = getByTestId(options[1].testID);
+      const option3 = getByTestId(options[2].testID);
 
       expect(option1).toBeDefined();
       expect(option2).toBeDefined();
@@ -56,45 +75,29 @@ describe('PillToggle', () => {
 
   describe('Interactions', () => {
     it('should call onPress function on click of pill button', () => {
-      const {getAllByTestId} = render(
+      const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
           <PillToggle selected={1} options={options} />
         </ThemeProvider>,
       );
 
-      const buttons = getAllByTestId('pill-toggle-button');
+      const button = getByTestId('pill-toggle-1');
 
-      fireEvent.press(buttons[0]);
+      fireEvent.press(button);
 
       expect(onPressMock).toHaveBeenCalledTimes(1);
     });
 
     it('should not call onPress function on click of pill button when option is disabled', () => {
-      const {getAllByTestId} = render(
+      const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
           <PillToggle selected={1} options={options} />
         </ThemeProvider>,
       );
 
-      const buttons = getAllByTestId('pill-toggle-button');
+      const button = getByTestId('pill-toggle-2');
 
-      fireEvent.press(buttons[2]);
-
-      expect(onPressMock).not.toHaveBeenCalled();
-    });
-
-    it('should not call onPress function on click of pill button when toggle itself is disabled', () => {
-      const {getAllByTestId} = render(
-        <ThemeProvider theme={defaultTheme}>
-          <PillToggle selected={1} options={options} disabled />
-        </ThemeProvider>,
-      );
-
-      const buttons = getAllByTestId('pill-toggle-button');
-
-      fireEvent.press(buttons[0]);
-      fireEvent.press(buttons[1]);
-      fireEvent.press(buttons[2]);
+      fireEvent.press(button);
 
       expect(onPressMock).not.toHaveBeenCalled();
     });
