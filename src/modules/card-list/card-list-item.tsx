@@ -87,13 +87,9 @@ export const CardListItem: React.FC<IProps> = ({
           <StyledCardDetailsRow
             testID="item-title"
             accessibilityLabel="item-title">
-            <StyledTitle variant="h4">
-              {title}
-            </StyledTitle>
+            <StyledTitle variant="h4">{title}</StyledTitle>
             {subTitle ? (
-              <StyledSubTitle variant="subtitle2">
-                {subTitle}
-              </StyledSubTitle>
+              <StyledSubTitle variant="subtitle2">{subTitle}</StyledSubTitle>
             ) : null}
             {eventDate ? (
               <StyledDate
@@ -117,8 +113,7 @@ export const CardListItem: React.FC<IProps> = ({
             <StyledCardDetailsRow
               testID="item-description"
               accessibilityLabel="item-description">
-              <StyledDescription numberOfLines={2} variant="subtitle2"
-                muted>
+              <StyledDescription numberOfLines={2} variant="subtitle2" muted>
                 {description}
               </StyledDescription>
             </StyledCardDetailsRow>
@@ -128,8 +123,7 @@ export const CardListItem: React.FC<IProps> = ({
               testID="item-tags"
               accessibilityLabel="item-tags">
               <StyledTags
-                muted italic variant="subtitle2"
-                weight="bold">
+                muted italic variant="subtitle2" weight="bold">
                 {tags.map((tag, ndx) => {
                   const isLastChild = tags.length - 1 === ndx;
 
