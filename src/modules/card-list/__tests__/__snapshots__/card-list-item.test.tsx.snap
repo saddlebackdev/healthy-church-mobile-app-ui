@@ -2,7 +2,8 @@
 
 exports[`CardListItem Interactions should call onPress method when pressed 1`] = `
 <View
-  accessible={true}
+  accessibilityLabel="list-item"
+  accessible={false}
   collapsable={false}
   focusable={true}
   nativeID="animatedComponent"
@@ -32,6 +33,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
     }
   >
     <View
+      accessibilityLabel="item-photo"
       style={
         Array [
           Object {
@@ -39,6 +41,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
           },
         ]
       }
+      testID="item-photo"
     >
       <Image
         source={
@@ -55,7 +58,6 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
             },
           ]
         }
-        testID="item-photo"
       />
     </View>
     <View
@@ -68,11 +70,13 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
       }
     >
       <View
+        accessibilityLabel="item-title"
         style={
           Array [
             Object {},
           ]
         }
+        testID="item-title"
       >
         <Text
           style={
@@ -86,7 +90,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
               },
             ]
           }
-          testID="item-title"
+          testID="heading"
           variant="h4"
         >
           A Title
@@ -105,7 +109,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
               },
             ]
           }
-          testID="item-subtitle"
+          testID="text"
           variant="subtitle2"
         >
           A Subtitle
@@ -153,11 +157,13 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
         </Text>
       </View>
       <View
+        accessibilityLabel="item-description"
         style={
           Array [
             Object {},
           ]
         }
+        testID="item-description"
       >
         <Text
           muted={true}
@@ -175,18 +181,20 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
               },
             ]
           }
-          testID="item-description"
+          testID="text"
           variant="subtitle2"
         >
           A Description
         </Text>
       </View>
       <View
+        accessibilityLabel="item-tags"
         style={
           Array [
             Object {},
           ]
         }
+        testID="item-tags"
       >
         <Text
           italic={true}
@@ -204,7 +212,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
               },
             ]
           }
-          testID="item-tags"
+          testID="text"
           variant="subtitle2"
           weight="bold"
         >
@@ -219,7 +227,8 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
 
 exports[`CardListItem Rendering hides tags when it is null 1`] = `
 <View
-  accessible={true}
+  accessibilityLabel="list-item"
+  accessible={false}
   collapsable={false}
   focusable={true}
   nativeID="animatedComponent"
@@ -249,6 +258,7 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
     }
   >
     <View
+      accessibilityLabel="item-photo"
       style={
         Array [
           Object {
@@ -256,6 +266,7 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
           },
         ]
       }
+      testID="item-photo"
     >
       <Image
         source={
@@ -272,7 +283,6 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
             },
           ]
         }
-        testID="item-photo"
       />
     </View>
     <View
@@ -285,11 +295,13 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
       }
     >
       <View
+        accessibilityLabel="item-title"
         style={
           Array [
             Object {},
           ]
         }
+        testID="item-title"
       >
         <Text
           style={
@@ -303,7 +315,7 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
               },
             ]
           }
-          testID="item-title"
+          testID="heading"
           variant="h4"
         >
           A Title
@@ -322,7 +334,7 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
               },
             ]
           }
-          testID="item-subtitle"
+          testID="text"
           variant="subtitle2"
         >
           A Subtitle
@@ -370,11 +382,13 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
         </Text>
       </View>
       <View
+        accessibilityLabel="item-description"
         style={
           Array [
             Object {},
           ]
         }
+        testID="item-description"
       >
         <Text
           muted={true}
@@ -392,7 +406,7 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
               },
             ]
           }
-          testID="item-description"
+          testID="text"
           variant="subtitle2"
         >
           A Description
@@ -405,7 +419,8 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
 
 exports[`CardListItem Rendering renders itself correctly 1`] = `
 <View
-  accessible={true}
+  accessibilityLabel="list-item"
+  accessible={false}
   collapsable={false}
   focusable={true}
   nativeID="animatedComponent"
@@ -435,6 +450,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="item-photo"
       style={
         Array [
           Object {
@@ -442,6 +458,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
           },
         ]
       }
+      testID="item-photo"
     >
       <Image
         source={
@@ -458,7 +475,6 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
             },
           ]
         }
-        testID="item-photo"
       />
     </View>
     <View
@@ -471,11 +487,13 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
       }
     >
       <View
+        accessibilityLabel="item-title"
         style={
           Array [
             Object {},
           ]
         }
+        testID="item-title"
       >
         <Text
           style={
@@ -489,7 +507,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
               },
             ]
           }
-          testID="item-title"
+          testID="heading"
           variant="h4"
         >
           A Title
@@ -508,7 +526,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
               },
             ]
           }
-          testID="item-subtitle"
+          testID="text"
           variant="subtitle2"
         >
           A Subtitle
@@ -556,11 +574,13 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
         </Text>
       </View>
       <View
+        accessibilityLabel="item-description"
         style={
           Array [
             Object {},
           ]
         }
+        testID="item-description"
       >
         <Text
           muted={true}
@@ -578,18 +598,20 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
               },
             ]
           }
-          testID="item-description"
+          testID="text"
           variant="subtitle2"
         >
           A Description
         </Text>
       </View>
       <View
+        accessibilityLabel="item-tags"
         style={
           Array [
             Object {},
           ]
         }
+        testID="item-tags"
       >
         <Text
           italic={true}
@@ -607,7 +629,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
               },
             ]
           }
-          testID="item-tags"
+          testID="text"
           variant="subtitle2"
           weight="bold"
         >
