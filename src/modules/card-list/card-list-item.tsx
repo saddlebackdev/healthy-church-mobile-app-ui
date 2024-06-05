@@ -122,8 +122,7 @@ export const CardListItem: React.FC<IProps> = ({
             <StyledCardDetailsRow
               testID="item-tags"
               accessibilityLabel="item-tags">
-              <StyledTags
-                muted italic variant="subtitle2" weight="bold">
+              <StyledTags muted italic variant="subtitle2" weight="bold">
                 {tags.map((tag, ndx) => {
                   const isLastChild = tags.length - 1 === ndx;
 
