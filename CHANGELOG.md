@@ -1,10 +1,18 @@
 # Changelog
 
+### v0.0.77
+
+- Move testID/accessibilityLabel from the source element to the wrapping view element
+
+---
+
 ### v0.0.76
 
 - Checkbox - Allow adding testID and accessibilityLabel as props
 - Pill Toggle - Allow adding testID and accessibilityLabel as props
 - Radio - Allow adding testID and accessibilityLabel as props
+
+---
 
 ### v0.0.75
 

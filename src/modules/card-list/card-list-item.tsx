@@ -67,25 +67,29 @@ export const CardListItem: React.FC<IProps> = ({
   onPress,
 }): React.ReactElement => (
   <React.Fragment>
-    <StyledCard activeOpacity={0.75} onPress={onPress} testID="list-item">
+    <StyledCard
+      activeOpacity={0.75}
+      onPress={onPress}
+      testID="list-item"
+      accessibilityLabel="list-item"
+      accessible={false}>
       <StyledCardContent>
-        <StyledCardPhotoWrapper>
+        <StyledCardPhotoWrapper
+          testID="item-photo"
+          accessibilityLabel="item-photo">
           <StyledPhoto
             source={photoUrl ? {uri: photoUrl} : fallbackImage}
             defaultSource={placeHolderImage}
-            testID="item-photo"
             $radius={radius}
           />
         </StyledCardPhotoWrapper>
         <StyledCardDetailsWrapper>
-          <StyledCardDetailsRow>
-            <StyledTitle variant="h4" testID="item-title">
-              {title}
-            </StyledTitle>
+          <StyledCardDetailsRow
+            testID="item-title"
+            accessibilityLabel="item-title">
+            <StyledTitle variant="h4">{title}</StyledTitle>
             {subTitle ? (
-              <StyledSubTitle variant="subtitle2" testID="item-subtitle">
-                {subTitle}
-              </StyledSubTitle>
+              <StyledSubTitle variant="subtitle2">{subTitle}</StyledSubTitle>
             ) : null}
             {eventDate ? (
               <StyledDate
@@ -106,24 +110,19 @@ export const CardListItem: React.FC<IProps> = ({
             ) : null}
           </StyledCardDetailsRow>
           {description ? (
-            <StyledCardDetailsRow>
-              <StyledDescription
-                numberOfLines={2}
-                variant="subtitle2"
-                muted
-                testID="item-description">
+            <StyledCardDetailsRow
+              testID="item-description"
+              accessibilityLabel="item-description">
+              <StyledDescription numberOfLines={2} variant="subtitle2" muted>
                 {description}
               </StyledDescription>
             </StyledCardDetailsRow>
           ) : null}
           {tags ? (
-            <StyledCardDetailsRow>
-              <StyledTags
-                muted
-                italic
-                variant="subtitle2"
-                weight="bold"
-                testID="item-tags">
+            <StyledCardDetailsRow
+              testID="item-tags"
+              accessibilityLabel="item-tags">
+              <StyledTags muted italic variant="subtitle2" weight="bold">
                 {tags.map((tag, ndx) => {
                   const isLastChild = tags.length - 1 === ndx;
 

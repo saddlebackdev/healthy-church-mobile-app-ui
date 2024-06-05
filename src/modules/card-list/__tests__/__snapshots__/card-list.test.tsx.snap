@@ -60,7 +60,8 @@ exports[`CardList Rendering renders itself correctly 1`] = `
       style={null}
     >
       <View
-        accessible={true}
+        accessibilityLabel="list-item"
+        accessible={false}
         collapsable={false}
         focusable={true}
         nativeID="animatedComponent"
@@ -90,6 +91,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
           }
         >
           <View
+            accessibilityLabel="item-photo"
             style={
               Array [
                 Object {
@@ -97,6 +99,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                 },
               ]
             }
+            testID="item-photo"
           >
             <Image
               source={
@@ -113,7 +116,6 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                   },
                 ]
               }
-              testID="item-photo"
             />
           </View>
           <View
@@ -126,11 +128,13 @@ exports[`CardList Rendering renders itself correctly 1`] = `
             }
           >
             <View
+              accessibilityLabel="item-title"
               style={
                 Array [
                   Object {},
                 ]
               }
+              testID="item-title"
             >
               <Text
                 style={
@@ -144,7 +148,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                     },
                   ]
                 }
-                testID="item-title"
+                testID="heading"
                 variant="h4"
               >
                 A Title
@@ -163,18 +167,20 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                     },
                   ]
                 }
-                testID="item-subtitle"
+                testID="text"
                 variant="subtitle2"
               >
                 A Subtitle
               </Text>
             </View>
             <View
+              accessibilityLabel="item-description"
               style={
                 Array [
                   Object {},
                 ]
               }
+              testID="item-description"
             >
               <Text
                 muted={true}
@@ -192,18 +198,20 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                     },
                   ]
                 }
-                testID="item-description"
+                testID="text"
                 variant="subtitle2"
               >
                 A Description
               </Text>
             </View>
             <View
+              accessibilityLabel="item-tags"
               style={
                 Array [
                   Object {},
                 ]
               }
+              testID="item-tags"
             >
               <Text
                 italic={true}
@@ -221,7 +229,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                     },
                   ]
                 }
-                testID="item-tags"
+                testID="text"
                 variant="subtitle2"
                 weight="bold"
               >
@@ -250,7 +258,8 @@ exports[`CardList Rendering renders itself correctly 1`] = `
       style={null}
     >
       <View
-        accessible={true}
+        accessibilityLabel="list-item"
+        accessible={false}
         collapsable={false}
         focusable={true}
         nativeID="animatedComponent"
@@ -280,6 +289,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
           }
         >
           <View
+            accessibilityLabel="item-photo"
             style={
               Array [
                 Object {
@@ -287,6 +297,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                 },
               ]
             }
+            testID="item-photo"
           >
             <Image
               source={
@@ -303,7 +314,6 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                   },
                 ]
               }
-              testID="item-photo"
             />
           </View>
           <View
@@ -316,11 +326,13 @@ exports[`CardList Rendering renders itself correctly 1`] = `
             }
           >
             <View
+              accessibilityLabel="item-title"
               style={
                 Array [
                   Object {},
                 ]
               }
+              testID="item-title"
             >
               <Text
                 style={
@@ -334,7 +346,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                     },
                   ]
                 }
-                testID="item-title"
+                testID="heading"
                 variant="h4"
               >
                 A Title
@@ -353,18 +365,20 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                     },
                   ]
                 }
-                testID="item-subtitle"
+                testID="text"
                 variant="subtitle2"
               >
                 A Subtitle
               </Text>
             </View>
             <View
+              accessibilityLabel="item-description"
               style={
                 Array [
                   Object {},
                 ]
               }
+              testID="item-description"
             >
               <Text
                 muted={true}
@@ -382,7 +396,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                     },
                   ]
                 }
-                testID="item-description"
+                testID="text"
                 variant="subtitle2"
               >
                 A Description
