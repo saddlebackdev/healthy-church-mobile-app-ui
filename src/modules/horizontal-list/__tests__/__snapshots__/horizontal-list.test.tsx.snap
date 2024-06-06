@@ -9,6 +9,7 @@ exports[`HorizontalList Rendering renders itself correctly 1`] = `
   }
 >
   <RCTScrollView
+    accessibilityLabel="list"
     data={
       Array [
         <Text>
@@ -101,6 +102,7 @@ exports[`HorizontalList Rendering should render the link 1`] = `
       }
     >
       <Text
+        accessibilityLabel="title"
         style={
           Array [
             Object {
@@ -116,6 +118,7 @@ exports[`HorizontalList Rendering should render the link 1`] = `
         variant="h1"
       />
       <View
+        accessibilityLabel="link"
         accessible={true}
         collapsable={false}
         focusable={true}
@@ -135,6 +138,7 @@ exports[`HorizontalList Rendering should render the link 1`] = `
         testID="link"
       >
         <Text
+          accessibilityLabel="link-label"
           style={
             Array [
               Object {
@@ -172,6 +176,7 @@ exports[`HorizontalList Rendering should render the link 1`] = `
     />
   </View>
   <RCTScrollView
+    accessibilityLabel="list"
     data={
       Array [
         <Text>
@@ -264,6 +269,7 @@ exports[`HorizontalList Rendering should render the title when passed 1`] = `
       }
     >
       <Text
+        accessibilityLabel="title"
         style={
           Array [
             Object {
@@ -300,6 +306,7 @@ exports[`HorizontalList Rendering should render the title when passed 1`] = `
     />
   </View>
   <RCTScrollView
+    accessibilityLabel="list"
     data={
       Array [
         <Text>
