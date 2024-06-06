@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.0.78
+
+- Card List Item - Add testId, accessibilityLabel and accessible props
+
 ### v0.0.77
 
 - Move testID/accessibilityLabel from the source element to the wrapping view element

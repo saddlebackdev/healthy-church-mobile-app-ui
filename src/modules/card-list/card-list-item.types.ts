@@ -44,4 +44,9 @@ export interface IProps {
 
   /** A React element to be rendered below the card photo. */
   marker?: ReactElement;
+
+  /** Unit Tests and Automation */
+  accessible?: boolean;
+  accessibilityLabel?: string;
+  testID?: string;
 }

@@ -65,14 +65,17 @@ export const CardListItem: React.FC<IProps> = ({
   description,
   tags,
   onPress,
+  accessible = true,
+  accessibilityLabel = 'list-item',
+  testID = 'list-item',
 }): React.ReactElement => (
   <React.Fragment>
     <StyledCard
       activeOpacity={0.75}
       onPress={onPress}
-      testID="list-item"
-      accessibilityLabel="list-item"
-      accessible={false}>
+      testID={testID}
+      accessibilityLabel={accessibilityLabel}
+      accessible={accessible}>
       <StyledCardContent>
         <StyledCardPhotoWrapper
           testID="item-photo"
