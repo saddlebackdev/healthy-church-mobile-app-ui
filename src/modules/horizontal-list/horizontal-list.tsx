@@ -108,16 +108,23 @@ export const HorizontalList: React.FC<IProps> = ({
       {shouldShowHeader && (
         <StyledWrapper>
           <StyledHeader $paddedHeader={paddedHeader}>
-            <StyledHeaderTitle testID="title" variant="h1">
+            <StyledHeaderTitle
+              variant="h1"
+              accessibilityLabel="title"
+              testID="title">
               {title}
             </StyledHeaderTitle>
 
             {linkLabel && (
               <StyledHeaderLink
                 testID="link"
+                accessibilityLabel="link"
                 activeOpacity={0.75}
                 onPress={onLinkPress}>
-                <StyledHeaderLinkLabel variant="h6" testID="link-label">
+                <StyledHeaderLinkLabel
+                  variant="h6"
+                  accessibilityLabel="link-label"
+                  testID="link-label">
                   {linkLabel}
                 </StyledHeaderLinkLabel>
               </StyledHeaderLink>
@@ -133,6 +140,7 @@ export const HorizontalList: React.FC<IProps> = ({
         renderItem={renderItem}
         keyExtractor={keyExtractor}
         showsHorizontalScrollIndicator={false}
+        accessibilityLabel="list"
         testID="list"
         horizontal
       />
