@@ -3,7 +3,7 @@
 exports[`CardListItem Interactions should call onPress method when pressed 1`] = `
 <View
   accessibilityLabel="list-item"
-  accessible={false}
+  accessible={true}
   collapsable={false}
   focusable={true}
   nativeID="animatedComponent"
@@ -228,7 +228,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
 exports[`CardListItem Rendering hides tags when it is null 1`] = `
 <View
   accessibilityLabel="list-item"
-  accessible={false}
+  accessible={true}
   collapsable={false}
   focusable={true}
   nativeID="animatedComponent"
@@ -420,7 +420,7 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
 exports[`CardListItem Rendering renders itself correctly 1`] = `
 <View
   accessibilityLabel="list-item"
-  accessible={false}
+  accessible={true}
   collapsable={false}
   focusable={true}
   nativeID="animatedComponent"

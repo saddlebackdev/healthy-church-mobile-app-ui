@@ -61,7 +61,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
     >
       <View
         accessibilityLabel="list-item"
-        accessible={false}
+        accessible={true}
         collapsable={false}
         focusable={true}
         nativeID="animatedComponent"
@@ -259,7 +259,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
     >
       <View
         accessibilityLabel="list-item"
-        accessible={false}
+        accessible={true}
         collapsable={false}
         focusable={true}
         nativeID="animatedComponent"
